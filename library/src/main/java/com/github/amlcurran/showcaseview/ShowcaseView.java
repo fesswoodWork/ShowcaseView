@@ -428,7 +428,7 @@ public class ShowcaseView extends RelativeLayout
      */
     public static class Builder {
 
-        private final ShowcaseView showcaseView;
+        private ShowcaseView showcaseView;
         private final Activity activity;
 
         private ViewGroup parent;
@@ -655,6 +655,15 @@ public class ShowcaseView extends RelativeLayout
             this.parent = ((ViewGroup) activity.getWindow().getDecorView());
             this.parentIndex = -1;
             return this;
+        }
+
+
+        public ShowcaseView getShowcaseView() {
+            return showcaseView;
+        }
+
+        public void setShowcaseView(TipShowcaseView showcaseView) {
+            this.showcaseView = showcaseView;
         }
     }
 
